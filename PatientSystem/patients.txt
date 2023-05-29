@@ -1,0 +1,6 @@
+bj0280|02-10-1974|Jones,Henry|BonusEruptus|37.5,80,60,16;37.5,82,15,16
+mm05115|24-05-1980|McCartney,Martha|AmoriaPhlebitis|
+tg0548|15-05-1948|Taylor,George|MadZombieDisease|37.2,80,60,12
+zd01100|01-01-2000|Zaius,Dr|ThreeStoogesSyndrome|
+kk0890|19-08-1990|Kroker,Kif|BonusEruptus,MadZombieDisease|40.2,70,60,12;39.7,80,40,12
+bs0000|02-02-2015|Baratheon,Shireen|ThreeStoogesSyndrome,BonusEruptus|
