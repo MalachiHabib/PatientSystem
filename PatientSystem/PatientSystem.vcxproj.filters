@@ -74,5 +74,8 @@
     <ClInclude Include="GPNotificationSystemFacade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PatientFileAdapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

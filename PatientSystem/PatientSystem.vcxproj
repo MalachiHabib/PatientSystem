@@ -156,6 +156,7 @@
     <ClInclude Include="PatientAlertLevels.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="PatientDatabaseLoader.h" />
+    <ClInclude Include="PatientFileAdapter.h" />
     <ClInclude Include="PatientFileLoader.h" />
     <ClInclude Include="PatientManagementSystem.h" />
     <ClInclude Include="Person.h" />
