@@ -1,13 +1,10 @@
 #pragma once
-
-
 #include <vector>
 #include <memory>
 #include "Person.h"
 #include "PatientAlertLevels.h"
 
 class Vitals;
-
 
 class Diagnosis {
 public:
@@ -19,7 +16,6 @@ public:
 
 class Patient : public Person {
 public:
-
 	Patient(const std::string& firstName, const std::string& lastName, std::tm birthday);
 
 	// return a calculated age for the patient
