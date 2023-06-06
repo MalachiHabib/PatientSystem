@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Alert Strategy">
+      <UniqueIdentifier>{8dedd802-df49-4dad-b9d8-b98a8c3f1529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Alert Strategy\Strategies">
+      <UniqueIdentifier>{10fabb50-1471-4214-ac17-8c5426aac066}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Strategies">
+      <UniqueIdentifier>{1a4ec231-9192-4cda-848b-5e7783920356}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +50,18 @@
     </ClCompile>
     <ClCompile Include="GPNotificationSystemFacade.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AmoriaPhlebitisStrategy.cpp">
+      <Filter>Source Files\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="BonusEruptusStrategy.cpp">
+      <Filter>Source Files\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="MadZombieDiseaseStrategy.cpp">
+      <Filter>Source Files\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeStoogesSyndromeStrategy.cpp">
+      <Filter>Source Files\Strategies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +97,21 @@
     </ClInclude>
     <ClInclude Include="PatientFileAdapter.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AlertLevelStrategy.h">
+      <Filter>Header Files\Alert Strategy</Filter>
+    </ClInclude>
+    <ClInclude Include="AmoriaPhlebitisStrategy.h">
+      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="BonusEruptusStrategy.h">
+      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="MadZombieDiseaseStrategy.h">
+      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreeStoogesSyndromeStrategy.h">
+      <Filter>Header Files\Alert Strategy\Strategies</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

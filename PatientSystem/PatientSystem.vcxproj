@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -139,20 +139,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AmoriaPhlebitisStrategy.cpp" />
+    <ClCompile Include="BonusEruptusStrategy.cpp" />
     <ClCompile Include="GPNotificationSystemFacade.cpp" />
     <ClCompile Include="HospitalAlertSystemFacade.cpp" />
+    <ClCompile Include="MadZombieDiseaseStrategy.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="PatientDatabaseLoader.cpp" />
     <ClCompile Include="PatientFileLoader.cpp" />
     <ClCompile Include="PatientManagementSystem.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="ThreeStoogesSyndromeStrategy.cpp" />
     <ClCompile Include="Vitals.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractPatientDatabaseLoader.h" />
+    <ClInclude Include="AlertLevelStrategy.h" />
+    <ClInclude Include="AmoriaPhlebitisStrategy.h" />
+    <ClInclude Include="BonusEruptusStrategy.h" />
     <ClInclude Include="GPNotificationSystemFacade.h" />
     <ClInclude Include="HospitalAlertSystemFacade.h" />
+    <ClInclude Include="MadZombieDiseaseStrategy.h" />
     <ClInclude Include="PatientAlertLevels.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="PatientDatabaseLoader.h" />
@@ -160,6 +168,7 @@
     <ClInclude Include="PatientFileLoader.h" />
     <ClInclude Include="PatientManagementSystem.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="ThreeStoogesSyndromeStrategy.h" />
     <ClInclude Include="Vitals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
