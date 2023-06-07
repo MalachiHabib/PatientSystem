@@ -4,6 +4,7 @@
 #include "Person.h"
 #include "PatientAlertLevels.h"
 #include "AlertLevelStrategy.h"
+#include "CompositeAlertStrategy.h"
 
 class Vitals;
 
@@ -30,8 +31,8 @@ public:
 	const AlertLevel alertLevel() const { return _alertLevel; }
 
 private:
-	const void calculateAlertLevels();
-	std::unique_ptr<AlertLevelStrategy> _alertStrategy;
+	void calculateAlertLevels();
+	std::unique_ptr<CompositeAlertStrategy> _alertStrategy = std::make_unique<CompositeAlertStrategy>();
 
 protected:
 	std::vector<std::string> _diagnosis;

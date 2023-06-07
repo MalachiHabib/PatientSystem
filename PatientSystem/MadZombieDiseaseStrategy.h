@@ -3,5 +3,5 @@
 
 class MadZombieDiseaseStrategy : public AlertLevelStrategy {
 public:
-    AlertLevel calculateAlertLevel(const Patient& patient, const Vitals& vitals) override;
+    AlertLevel determineAlertLevel(const Patient& patient, const Vitals& vitals) override;
 };

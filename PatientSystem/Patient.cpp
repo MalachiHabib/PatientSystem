@@ -64,35 +64,41 @@ std::ostream& operator<<(std::ostream& os, const Patient& p)
 	return os;
 }
 
-void Patient::addDiagnosis(const std::string& diagnosis)
+const std::vector<std::string>& Patient::diagnoses() const
 {
+	return _diagnosis;
+}
+
+/**
+ * @brief Adds diagnosis (disease) to a Patient.
+ *
+ * This method will add diagnosis to a patient.
+ * It will add the relevent strategies based on the diseases the patient has to
+ * a vecotr within CompositeAlertStrategy.
+ * 
+ * @param diagnosis A string representation of the disease the Patient has
+ * @throws runtime_error when diagnosis is unknown.
+ */
+void Patient::addDiagnosis(const std::string& diagnosis) {
 	_diagnosis.push_back(diagnosis);
-	if (primaryDiagnosis() == Diagnosis::BONUS_ERUPTUS) {
-		_alertStrategy = std::make_unique<BonusEruptusStrategy>();
+
+	if (diagnosis == Diagnosis::BONUS_ERUPTUS) {
+		_alertStrategy->addStrategy(std::make_unique<BonusEruptusStrategy>());
 	}
-	else if (primaryDiagnosis() == Diagnosis::AMORIA_PHLEBITIS) {
-		_alertStrategy = std::make_unique<AmoriaPhlebitisStrategy>();
+	else if (diagnosis == Diagnosis::AMORIA_PHLEBITIS) {
+		_alertStrategy->addStrategy(std::make_unique<AmoriaPhlebitisStrategy>());
 	}
-	else if (primaryDiagnosis() == Diagnosis::MAD_ZOMBIE_DISEASE) {
-		_alertStrategy = std::make_unique<MadZombieDiseaseStrategy>();
+	else if (diagnosis == Diagnosis::MAD_ZOMBIE_DISEASE) {
+		_alertStrategy->addStrategy(std::make_unique<MadZombieDiseaseStrategy>());
 	}
-	else if (primaryDiagnosis() == Diagnosis::THREE_STOOGES_SYNDROME) {
-		_alertStrategy = std::make_unique<ThreeStoogesSyndromeStrategy>();
+	else if (diagnosis == Diagnosis::THREE_STOOGES_SYNDROME) {
+		_alertStrategy->addStrategy(std::make_unique<ThreeStoogesSyndromeStrategy>());
 	}
 	else {
 		throw std::runtime_error("Unknown diagnosis: " + diagnosis);
 	}
 }
 
-const std::string& Patient::primaryDiagnosis() const
-{
-	return _diagnosis.front();
-}
-
-const std::vector<std::string>& Patient::diagnoses() const
-{
-	return _diagnosis;
-}
 
 void Patient::addVitals(const Vitals* v)
 {
@@ -105,11 +111,11 @@ const std::vector<const Vitals*> Patient::vitals() const
 	return _vitals;
 }
 
-const void Patient::calculateAlertLevels()
+ void Patient::calculateAlertLevels()
 {
 	for (const auto& vitals : _vitals)
 	{
-		AlertLevel newAlertLevel = _alertStrategy->calculateAlertLevel(*this, *vitals);
+		AlertLevel newAlertLevel = _alertStrategy->determineAlertLevel(*this, *vitals);
 		if (newAlertLevel > _alertLevel)
 		{
 			setAlertLevel(newAlertLevel);

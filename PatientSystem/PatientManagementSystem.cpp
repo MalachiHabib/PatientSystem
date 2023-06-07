@@ -16,7 +16,7 @@ using namespace std;
 
 
 PatientManagementSystem::PatientManagementSystem() :
-	_patientDatabaseLoader(std::make_unique<PatientDatabaseLoader>()),
+	_patientDatabaseLoader(std::make_unique<PatientFileAdapter>()),
 	_hospitalAlertSystem(std::make_unique<HospitalAlertSystemFacade>()),
 	_gpNotificationSystem(std::make_unique<GPNotificationSystemFacade>())
 {
@@ -56,11 +56,12 @@ void PatientManagementSystem::run()
 		cin >> option;
 
 		// handle basic errors
-		if (cin.bad()) {
-			cin.clear();
-			cin.ignore();
+		if (cin.fail()) {
+			cin.clear(); // clear the error state
+			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignore all remaining characters in the buffer
 			continue;
 		}
+
 
 		// switch based on the selected option
 		switch (option) {
