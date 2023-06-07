@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="AmoriaPhlebitisStrategy.cpp" />
     <ClCompile Include="BonusEruptusStrategy.cpp" />
+    <ClCompile Include="CompositeAlertStrategy.cpp" />
     <ClCompile Include="GPNotificationSystemFacade.cpp" />
     <ClCompile Include="HospitalAlertSystemFacade.cpp" />
     <ClCompile Include="MadZombieDiseaseStrategy.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="AlertLevelStrategy.h" />
     <ClInclude Include="AmoriaPhlebitisStrategy.h" />
     <ClInclude Include="BonusEruptusStrategy.h" />
+    <ClInclude Include="CompositeAlertStrategy.h" />
     <ClInclude Include="GPNotificationSystemFacade.h" />
     <ClInclude Include="HospitalAlertSystemFacade.h" />
     <ClInclude Include="MadZombieDiseaseStrategy.h" />

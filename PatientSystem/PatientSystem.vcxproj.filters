@@ -63,6 +63,9 @@
     <ClCompile Include="ThreeStoogesSyndromeStrategy.cpp">
       <Filter>Source Files\Strategies</Filter>
     </ClCompile>
+    <ClCompile Include="CompositeAlertStrategy.cpp">
+      <Filter>Source Files\Strategies</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -111,6 +114,9 @@
       <Filter>Header Files\Alert Strategy\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="ThreeStoogesSyndromeStrategy.h">
+      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="CompositeAlertStrategy.h">
       <Filter>Header Files\Alert Strategy\Strategies</Filter>
     </ClInclude>
   </ItemGroup>

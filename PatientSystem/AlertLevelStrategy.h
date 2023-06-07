@@ -8,5 +8,5 @@ class Patient;
 class AlertLevelStrategy {
 public:
     virtual ~AlertLevelStrategy() = default;
-    virtual AlertLevel calculateAlertLevel(const Patient& patient, const Vitals& vitals) = 0;
+    virtual AlertLevel determineAlertLevel(const Patient& patient, const Vitals& vitals) = 0;
 };
