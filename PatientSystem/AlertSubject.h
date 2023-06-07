@@ -9,5 +9,5 @@ public:
 	virtual void notifyObservers() = 0;
 
 protected:
-	std::vector<HospitalAlertObserver*> observers;
+	std::vector<HospitalAlertObserver*> _observers;
 };
