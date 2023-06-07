@@ -1,14 +1,13 @@
 #pragma once
-
 #include "Patient.h"
+#include "HospitalAlertObserver.h"
 
-class HospitalAlertSystemFacade
-{
+class HospitalAlertSystemFacade : public HospitalAlertObserver {
 public:
 	HospitalAlertSystemFacade();
 	virtual ~HospitalAlertSystemFacade();
+	void notify(const Patient& patient) override;
 
-	void sendAlertForPatient(Patient* p);
-
+private:
+	void sendAlertForPatient(const Patient* p);
 };
-

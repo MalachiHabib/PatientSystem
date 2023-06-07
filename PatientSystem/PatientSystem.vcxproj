@@ -157,10 +157,12 @@
   <ItemGroup>
     <ClInclude Include="AbstractPatientDatabaseLoader.h" />
     <ClInclude Include="AlertLevelStrategy.h" />
+    <ClInclude Include="AlertSubject.h" />
     <ClInclude Include="AmoriaPhlebitisStrategy.h" />
     <ClInclude Include="BonusEruptusStrategy.h" />
     <ClInclude Include="CompositeAlertStrategy.h" />
     <ClInclude Include="GPNotificationSystemFacade.h" />
+    <ClInclude Include="HospitalAlertObserver.h" />
     <ClInclude Include="HospitalAlertSystemFacade.h" />
     <ClInclude Include="MadZombieDiseaseStrategy.h" />
     <ClInclude Include="PatientAlertLevels.h" />

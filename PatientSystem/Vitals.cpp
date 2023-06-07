@@ -1,7 +1,5 @@
 #include "Vitals.h"
-
 #include <iostream>
-
 
 std::ostream& operator<<(std::ostream& os, const Vitals& p)
 {

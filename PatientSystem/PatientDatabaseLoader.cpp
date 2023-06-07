@@ -1,11 +1,8 @@
 #include "PatientDatabaseLoader.h"
-
 #include <iomanip>
 #include <sstream>
-
 #include "Patient.h"
 #include "Vitals.h"
-
 
 void PatientDatabaseLoader::initialiseConnection()
 {

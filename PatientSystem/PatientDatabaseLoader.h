@@ -1,7 +1,5 @@
 #pragma once
-
 #include "AbstractPatientDatabaseLoader.h"
-
 
 // This is a simulated class. It does not really connect to the database, but
 // for the sake of the assignment, pretend it does.
@@ -16,4 +14,3 @@ public:
 	virtual void closeConnection() override;
 
 };
-
