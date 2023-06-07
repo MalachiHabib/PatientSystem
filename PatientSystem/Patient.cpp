@@ -67,8 +67,6 @@ std::ostream& operator<<(std::ostream& os, const Patient& p)
 void Patient::addDiagnosis(const std::string& diagnosis)
 {
 	_diagnosis.push_back(diagnosis);
-	cout << this->firstName() + " ";
-	cout << primaryDiagnosis() + "\n";
 	if (primaryDiagnosis() == Diagnosis::BONUS_ERUPTUS) {
 		_alertStrategy = std::make_unique<BonusEruptusStrategy>();
 	}
