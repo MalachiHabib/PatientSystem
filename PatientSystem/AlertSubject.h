@@ -7,4 +7,7 @@ public:
 	virtual void registerObserver(HospitalAlertObserver* observer) = 0;
 	virtual void removeObserver(HospitalAlertObserver* observer) = 0;
 	virtual void notifyObservers() = 0;
+
+protected:
+	std::vector<HospitalAlertObserver*> observers;
 };

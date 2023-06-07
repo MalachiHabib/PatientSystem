@@ -38,7 +38,7 @@ public:
 private:
 	void calculateAlertLevels();
 	std::unique_ptr<CompositeAlertStrategy> _alertStrategy = std::make_unique<CompositeAlertStrategy>();
-	std::vector<HospitalAlertObserver*> observers;
+
 
 protected:
 	std::vector<std::string> _diagnosis;
