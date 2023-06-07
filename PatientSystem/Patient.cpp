@@ -21,6 +21,20 @@ Patient::Patient(const std::string& firstName, const std::string& lastName, std:
 {
 }
 
+void Patient::registerObserver(HospitalAlertObserver* observer) {
+	observers.push_back(observer);
+}
+
+void Patient::removeObserver(HospitalAlertObserver* observer) {
+	observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
+}
+
+void Patient::notifyObservers() {
+	for (HospitalAlertObserver* observer : observers) {
+		observer->notify(*this);
+	}
+}
+
 int Patient::age() const
 {
 	// an inaccurate age estimate but fine for assignment purposes
@@ -138,6 +152,7 @@ void Patient::setAlertLevel(AlertLevel level)
 			break;
 		case AlertLevel::Red:
 			cout << "Red";
+			notifyObservers();
 			break;
 		}
 		cout << endl;

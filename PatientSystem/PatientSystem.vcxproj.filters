@@ -22,6 +22,12 @@
     <Filter Include="Source Files\Strategies">
       <UniqueIdentifier>{1a4ec231-9192-4cda-848b-5e7783920356}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Notifications">
+      <UniqueIdentifier>{6e8f9354-1a70-4a29-bdea-cb4b74ce1db2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Notifications">
+      <UniqueIdentifier>{cdbecb89-5880-44c9-9e70-17ff61590b58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -92,12 +98,6 @@
     <ClInclude Include="PatientFileLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HospitalAlertSystemFacade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GPNotificationSystemFacade.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="PatientFileAdapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -118,6 +118,18 @@
     </ClInclude>
     <ClInclude Include="CompositeAlertStrategy.h">
       <Filter>Header Files\Alert Strategy\Strategies</Filter>
+    </ClInclude>
+    <ClInclude Include="HospitalAlertObserver.h">
+      <Filter>Header Files\Notifications</Filter>
+    </ClInclude>
+    <ClInclude Include="HospitalAlertSystemFacade.h">
+      <Filter>Header Files\Notifications</Filter>
+    </ClInclude>
+    <ClInclude Include="GPNotificationSystemFacade.h">
+      <Filter>Header Files\Notifications</Filter>
+    </ClInclude>
+    <ClInclude Include="AlertSubject.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

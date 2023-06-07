@@ -9,6 +9,10 @@ GPNotificationSystemFacade::GPNotificationSystemFacade()
 GPNotificationSystemFacade::~GPNotificationSystemFacade()
 { }
 
+void GPNotificationSystemFacade::notify(const Patient& patient) {
+	sendGPNotificationForPatient(const_cast<Patient*>(&patient));
+}
+
 void GPNotificationSystemFacade::sendGPNotificationForPatient(Patient* p)
 {
 	if (p->alertLevel() > AlertLevel::Orange) {

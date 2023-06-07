@@ -5,6 +5,7 @@
 #include "PatientAlertLevels.h"
 #include "AlertLevelStrategy.h"
 #include "CompositeAlertStrategy.h"
+#include "AlertSubject.h"
 
 class Vitals;
 
@@ -16,7 +17,7 @@ public:
 	static const std::string THREE_STOOGES_SYNDROME;
 };
 
-class Patient : public Person {
+class Patient : public Person, public AlertSubject {
 public:
 	Patient(const std::string& firstName, const std::string& lastName, std::tm birthday);
 	int age() const;
@@ -30,9 +31,14 @@ public:
 	void setAlertLevel(AlertLevel level);
 	const AlertLevel alertLevel() const { return _alertLevel; }
 
+	void registerObserver(HospitalAlertObserver* observer) override;
+	void removeObserver(HospitalAlertObserver* observer) override;
+	void notifyObservers() override;
+
 private:
 	void calculateAlertLevels();
 	std::unique_ptr<CompositeAlertStrategy> _alertStrategy = std::make_unique<CompositeAlertStrategy>();
+	std::vector<HospitalAlertObserver*> observers;
 
 protected:
 	std::vector<std::string> _diagnosis;
