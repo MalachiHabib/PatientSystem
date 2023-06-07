@@ -10,6 +10,5 @@ public:
 	void notify(const Patient& patient) override;
 
 private:
-	void sendGPNotificationForPatient(Patient* p);
+	void sendGPNotificationForPatient(const Patient* p);
 };
-

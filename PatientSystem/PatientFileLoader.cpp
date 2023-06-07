@@ -7,7 +7,6 @@
 #include "Patient.h"
 #include "Vitals.h"
 
-
 /**
  * @brief Loads patient data from a given file
  *

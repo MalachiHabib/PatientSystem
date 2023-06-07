@@ -1,7 +1,5 @@
 #pragma once
-
 #include <iostream>
-
 
 class Vitals
 {
@@ -27,4 +25,3 @@ protected:
 	int _respiratoryRate;
 
 };
-

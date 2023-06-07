@@ -1,5 +1,4 @@
 #pragma once
-
 #include "AbstractPatientDatabaseLoader.h"
 #include "PatientFileLoader.h"
 

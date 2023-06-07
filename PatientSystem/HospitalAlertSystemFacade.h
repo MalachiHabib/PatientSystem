@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Patient.h"
 #include "HospitalAlertObserver.h"
 
@@ -10,6 +9,5 @@ public:
 	void notify(const Patient& patient) override;
 
 private:
-	void sendAlertForPatient(Patient* p);
+	void sendAlertForPatient(const Patient* p);
 };
-

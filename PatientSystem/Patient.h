@@ -31,6 +31,7 @@ public:
 	void setAlertLevel(AlertLevel level);
 	const AlertLevel alertLevel() const { return _alertLevel; }
 
+	// Observer related
 	void registerObserver(HospitalAlertObserver* observer) override;
 	void removeObserver(HospitalAlertObserver* observer) override;
 	void notifyObservers() override;
@@ -39,7 +40,6 @@ private:
 	void calculateAlertLevels();
 	std::unique_ptr<CompositeAlertStrategy> _alertStrategy = std::make_unique<CompositeAlertStrategy>();
 
-
 protected:
 	std::vector<std::string> _diagnosis;
 	std::vector<const Vitals*> _vitals;
@@ -47,4 +47,3 @@ protected:
 
 	friend std::ostream& operator<<(std::ostream& os, const Patient& p);
 };
-

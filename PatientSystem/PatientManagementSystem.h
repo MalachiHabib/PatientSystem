@@ -1,17 +1,14 @@
 #pragma once
-
 #include <map>
 #include <memory>
 #include <string>
 #include <vector>
-
 
 // forward declare several classes
 class AbstractPatientDatabaseLoader;
 class HospitalAlertSystemFacade;
 class GPNotificationSystemFacade;
 class Patient;
-
 
 class PatientManagementSystem
 {
@@ -41,4 +38,3 @@ protected:
 	std::unique_ptr<AbstractPatientDatabaseLoader> _patientDatabaseLoader;
 
 };
-

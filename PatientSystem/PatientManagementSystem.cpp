@@ -1,19 +1,13 @@
 #include "PatientManagementSystem.h"
-
 #include <iostream>
 #include <map>
 #include <tuple>
-
 #include "Patient.h"
 #include "PatientDatabaseLoader.h"
 #include "Vitals.h"
-
 #include "GPNotificationSystemFacade.h"
 #include "HospitalAlertSystemFacade.h"
 #include "PatientFileAdapter.h"
-
-using namespace std;
-
 
 PatientManagementSystem::PatientManagementSystem() :
 	_patientDatabaseLoader(std::make_unique<PatientFileAdapter>()),
@@ -54,15 +48,14 @@ void PatientManagementSystem::run()
 	while (running) {
 		printMainMenu();
 		int option = 0;
-		cin >> option;
+		std::cin >> option;
 
 		// handle basic errors
-		if (cin.fail()) {
-			cin.clear(); // clear the error state
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignore all remaining characters in the buffer
+		if (std::cin.fail()) {
+			std::cin.clear(); // clear the error state
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // ignore all remaining characters in the buffer
 			continue;
 		}
-
 
 		// switch based on the selected option
 		switch (option) {
@@ -81,49 +74,49 @@ void PatientManagementSystem::run()
 
 void PatientManagementSystem::addVitalsRecord()
 {
-	cout << "Patients" << endl;
+	std::cout << "Patients" << std::endl;
 	printPatients();
-	cout << endl;
-	cout << "Enter the patient ID to declare vitals for > ";
+	std::cout << std::endl;
+	std::cout << "Enter the patient ID to declare vitals for > ";
 	
-	string pid { "" };
-	cin >> pid;
+	std::string pid { "" };
+	std::cin >> pid;
 	if (_patientLookup.count(pid)) {
 		float bodyTemperature;
 		int bloodPressure;
 		int heartRate;
 		int respitoryRate;
 
-		cout << "enter body temperature: ";
-		cin >> bodyTemperature;
-		cout << "enter blood pressure: ";
-		cin >> bloodPressure;
-		cout << "enter heart rate: ";
-		cin >> heartRate;
-		cout << "enter respitory rate: ";
-		cin >> respitoryRate;
+		std::cout << "enter body temperature: ";
+		std::cin >> bodyTemperature;
+		std::cout << "enter blood pressure: ";
+		std::cin >> bloodPressure;
+		std::cout << "enter heart rate: ";
+		std::cin >> heartRate;
+		std::cout << "enter respitory rate: ";
+		std::cin >> respitoryRate;
 
 		Vitals* v = new Vitals(bodyTemperature, bloodPressure, heartRate, respitoryRate);
 		_patientLookup[pid]->addVitals(v);
 	}
 	else {
-		cout << "Patient not found" << endl;
+		std::cout << "Patient not found" << std::endl;
 	}
 }
 
 void PatientManagementSystem::printWelcomeMessage() const
 {
-	cout << "WELCOME TO HEALTHCO 4000" << endl;
-	cout << "------------------------" << endl;
+	std::cout << "WELCOME TO HEALTHCO 4000" << std::endl;
+	std::cout << "------------------------" << std::endl;
 }
 
 void PatientManagementSystem::printMainMenu() const
 {
-	cout << endl << "Select an option:" << endl;
-	cout << "1. List patients" << endl;
-	cout << "2. Add vitals record" << endl;
-	cout << "3. Quit" << endl;
-	cout << "> ";
+	std::cout << std::endl << "Select an option:" << std::endl;
+	std::cout << "1. List patients" << std::endl;
+	std::cout << "2. Add vitals record" << std::endl;
+	std::cout << "3. Quit" << std::endl;
+	std::cout << "> ";
 }
 
 void PatientManagementSystem::printPatients() const

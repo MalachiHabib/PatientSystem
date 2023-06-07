@@ -8,8 +8,6 @@
 #include <iomanip>
 #include <sstream>
 
-using namespace std;
-
 const std::string Diagnosis::BONUS_ERUPTUS = "BonusEruptus";
 const std::string Diagnosis::AMORIA_PHLEBITIS = "AmoriaPhlebitis";
 const std::string Diagnosis::MAD_ZOMBIE_DISEASE = "MadZombieDisease";
@@ -21,14 +19,37 @@ Patient::Patient(const std::string& firstName, const std::string& lastName, std:
 {
 }
 
+/**
+ * @brief Register an observer for alert notifications.
+ *
+ * This method adds an observer to the list of observers that are
+ * notified when the alert level changes.
+ *
+ * @param observer The observer to register.
+ */
 void Patient::registerObserver(HospitalAlertObserver* observer) {
 	observers.push_back(observer);
 }
 
+/**
+ * @brief Remove an observer from alert notifications.
+ *
+ * This method removes an observer from the list of observers that are
+ * notified when the alert level changes.
+ * This is not used, but would be needed in the real system.
+ *
+ * @param observer The observer to remove.
+ */
 void Patient::removeObserver(HospitalAlertObserver* observer) {
 	observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
 }
 
+/**
+ * @brief Notify all registered observers of the current alert level.
+ *
+ * This method notifies all registered observers of the current alert
+ * level by calling the observer's notify method.
+ */
 void Patient::notifyObservers() {
 	for (HospitalAlertObserver* observer : observers) {
 		observer->notify(*this);
@@ -125,6 +146,13 @@ const std::vector<const Vitals*> Patient::vitals() const
 	return _vitals;
 }
 
+/**
+ * @brief Calculate the current alert level based on vitals.
+ *
+ * This method calculates the current alert level based on the vitals
+ * of the patient. If the new alert level is higher than the current one,
+ * it sets the new alert level.
+ */
  void Patient::calculateAlertLevels()
 {
 	for (const auto& vitals : _vitals)
@@ -142,19 +170,19 @@ void Patient::setAlertLevel(AlertLevel level)
 	_alertLevel = level;
 
 	if (_alertLevel > AlertLevel::Green) {
-		cout << "Patient: " << humanReadableID() << "has an alert level: ";
+		std::cout << "Patient: " << humanReadableID() << "has an alert level: ";
 		switch (_alertLevel) {
 		case AlertLevel::Yellow:
-			cout << "Yellow";
+			std::cout << "Yellow";
 			break;
 		case AlertLevel::Orange:
-			cout << "Orange";
+			std::cout << "Orange";
 			break;
 		case AlertLevel::Red:
-			cout << "Red";
+			std::cout << "Red";
 			notifyObservers();
 			break;
 		}
-		cout << endl;
+		std::cout << std::endl;
 	}
 }
