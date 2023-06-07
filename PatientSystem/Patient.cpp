@@ -22,36 +22,36 @@ Patient::Patient(const std::string& firstName, const std::string& lastName, std:
 /**
  * @brief Register an observer for alert notifications.
  *
- * This method adds an observer to the list of observers that are
+ * This method adds an observer to the list of _observers that are
  * notified when the alert level changes.
  *
  * @param observer The observer to register.
  */
 void Patient::registerObserver(HospitalAlertObserver* observer) {
-	observers.push_back(observer);
+	_observers.push_back(observer);
 }
 
 /**
  * @brief Remove an observer from alert notifications.
  *
- * This method removes an observer from the list of observers that are
+ * This method removes an observer from the list of _observers that are
  * notified when the alert level changes.
  * This is not used, but would be needed in the real system.
  *
  * @param observer The observer to remove.
  */
 void Patient::removeObserver(HospitalAlertObserver* observer) {
-	observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
+	_observers.erase(std::remove(_observers.begin(), _observers.end(), observer), _observers.end());
 }
 
 /**
- * @brief Notify all registered observers of the current alert level.
+ * @brief Notify all registered _observers of the current alert level.
  *
- * This method notifies all registered observers of the current alert
+ * This method notifies all registered _observers of the current alert
  * level by calling the observer's notify method.
  */
 void Patient::notifyObservers() {
-	for (HospitalAlertObserver* observer : observers) {
+	for (HospitalAlertObserver* observer : _observers) {
 		observer->notify(*this);
 	}
 }
