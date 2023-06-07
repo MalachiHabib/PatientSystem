@@ -13,123 +13,138 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Alert Strategy">
+    <Filter Include="Header Files\Alerts">
       <UniqueIdentifier>{8dedd802-df49-4dad-b9d8-b98a8c3f1529}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Alert Strategy\Strategies">
+    <Filter Include="Header Files\Alerts\Strategies">
       <UniqueIdentifier>{10fabb50-1471-4214-ac17-8c5426aac066}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Strategies">
+    <Filter Include="Header Files\Alerts\Observers">
+      <UniqueIdentifier>{b880c28b-24a3-4970-893b-44484e1c7b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PatientManagement">
+      <UniqueIdentifier>{f31f585e-daf1-4874-8c2a-9b4d9abdfbe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Database">
+      <UniqueIdentifier>{38a0a8aa-224a-4ee8-810b-82c82b370c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Alerts">
+      <UniqueIdentifier>{dfeba2fb-524b-4491-a4bc-55678984284e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Alerts\Notifications">
+      <UniqueIdentifier>{cdbecb89-5880-44c9-9e70-17ff61590b58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Alerts\Strategies">
       <UniqueIdentifier>{1a4ec231-9192-4cda-848b-5e7783920356}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Notifications">
-      <UniqueIdentifier>{6e8f9354-1a70-4a29-bdea-cb4b74ce1db2}</UniqueIdentifier>
+    <Filter Include="Source Files\PatientManagement">
+      <UniqueIdentifier>{49b40442-0b40-4c3b-b16c-6bc0dd020a67}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Notifications">
-      <UniqueIdentifier>{cdbecb89-5880-44c9-9e70-17ff61590b58}</UniqueIdentifier>
+    <Filter Include="Source Files\Database">
+      <UniqueIdentifier>{6498ab30-2554-4001-bd75-01854f768195}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Patient.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PatientDatabaseLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PatientManagementSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vitals.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PatientFileLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="HospitalAlertSystemFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GPNotificationSystemFacade.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AmoriaPhlebitisStrategy.cpp">
-      <Filter>Source Files\Strategies</Filter>
+      <Filter>Source Files\Alerts\Strategies</Filter>
     </ClCompile>
     <ClCompile Include="BonusEruptusStrategy.cpp">
-      <Filter>Source Files\Strategies</Filter>
+      <Filter>Source Files\Alerts\Strategies</Filter>
     </ClCompile>
     <ClCompile Include="MadZombieDiseaseStrategy.cpp">
-      <Filter>Source Files\Strategies</Filter>
+      <Filter>Source Files\Alerts\Strategies</Filter>
     </ClCompile>
     <ClCompile Include="ThreeStoogesSyndromeStrategy.cpp">
-      <Filter>Source Files\Strategies</Filter>
+      <Filter>Source Files\Alerts\Strategies</Filter>
     </ClCompile>
     <ClCompile Include="CompositeAlertStrategy.cpp">
-      <Filter>Source Files\Strategies</Filter>
+      <Filter>Source Files\Alerts\Strategies</Filter>
+    </ClCompile>
+    <ClCompile Include="GPNotificationSystemFacade.cpp">
+      <Filter>Source Files\Alerts\Notifications</Filter>
+    </ClCompile>
+    <ClCompile Include="HospitalAlertSystemFacade.cpp">
+      <Filter>Source Files\Alerts\Notifications</Filter>
+    </ClCompile>
+    <ClCompile Include="Patient.cpp">
+      <Filter>Source Files\PatientManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Source Files\PatientManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Vitals.cpp">
+      <Filter>Source Files\PatientManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="PatientManagementSystem.cpp">
+      <Filter>Source Files\PatientManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="PatientDatabaseLoader.cpp">
+      <Filter>Source Files\Database</Filter>
+    </ClCompile>
+    <ClCompile Include="PatientFileLoader.cpp">
+      <Filter>Source Files\Database</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Person.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Patient.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PatientDatabaseLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AbstractPatientDatabaseLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PatientManagementSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vitals.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PatientAlertLevels.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PatientFileLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PatientFileAdapter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AlertLevelStrategy.h">
-      <Filter>Header Files\Alert Strategy</Filter>
-    </ClInclude>
     <ClInclude Include="AmoriaPhlebitisStrategy.h">
-      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+      <Filter>Header Files\Alerts\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="BonusEruptusStrategy.h">
-      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+      <Filter>Header Files\Alerts\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="MadZombieDiseaseStrategy.h">
-      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+      <Filter>Header Files\Alerts\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="ThreeStoogesSyndromeStrategy.h">
-      <Filter>Header Files\Alert Strategy\Strategies</Filter>
+      <Filter>Header Files\Alerts\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="CompositeAlertStrategy.h">
-      <Filter>Header Files\Alert Strategy\Strategies</Filter>
-    </ClInclude>
-    <ClInclude Include="HospitalAlertObserver.h">
-      <Filter>Header Files\Notifications</Filter>
-    </ClInclude>
-    <ClInclude Include="HospitalAlertSystemFacade.h">
-      <Filter>Header Files\Notifications</Filter>
+      <Filter>Header Files\Alerts\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="GPNotificationSystemFacade.h">
-      <Filter>Header Files\Notifications</Filter>
+      <Filter>Header Files\Alerts\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="HospitalAlertObserver.h">
+      <Filter>Header Files\Alerts\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="HospitalAlertSystemFacade.h">
+      <Filter>Header Files\Alerts\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="AlertLevelStrategy.h">
+      <Filter>Header Files\Alerts\Strategies</Filter>
     </ClInclude>
     <ClInclude Include="AlertSubject.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Alerts\Observers</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientAlertLevels.h">
+      <Filter>Header Files\Alerts</Filter>
+    </ClInclude>
+    <ClInclude Include="Patient.h">
+      <Filter>Header Files\PatientManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientManagementSystem.h">
+      <Filter>Header Files\PatientManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Vitals.h">
+      <Filter>Header Files\PatientManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>Header Files\PatientManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractPatientDatabaseLoader.h">
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientDatabaseLoader.h">
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientFileAdapter.h">
+      <Filter>Header Files\Database</Filter>
+    </ClInclude>
+    <ClInclude Include="PatientFileLoader.h">
+      <Filter>Header Files\Database</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

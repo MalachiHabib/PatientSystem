@@ -134,7 +134,6 @@ void Patient::addDiagnosis(const std::string& diagnosis) {
 	}
 }
 
-
 void Patient::addVitals(const Vitals* v)
 {
 	_vitals.push_back(v);
